@@ -4,6 +4,8 @@
 
 Code and models from the paper ["Language Models are Unsupervised Multitask Learners"](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf).
 
+The original release was for TensorFlow 1.x. The code is updated to work with TensorFlow 2.x (tested on 2.6.0).
+
 You can read about GPT-2 and its staged release in our [original blog post](https://blog.openai.com/better-language-models/), [6 month follow-up post](https://openai.com/blog/gpt-2-6-month-follow-up/), and [final post](https://www.openai.com/blog/gpt-2-1-5b-release/).
 
 We have also [released a dataset](https://github.com/openai/gpt-2-output-dataset) for researchers to study their behaviors.
@@ -15,6 +17,20 @@ We have also [released a dataset](https://github.com/openai/gpt-2-output-dataset
 This repository is meant to be a starting point for researchers and engineers to experiment with GPT-2.
 
 For basic information, see our [model card](./model_card.md).
+
+### Downloading the pre-trained models
+
+Use the `download_model.py` script to download the model weights. The available models are (named by their number of parameters):
+
+- 117M
+- 124M
+- 345M (does not fit on GPU with 4GB of VRAM)
+- 355M (does not fit on GPU with 4GB of VRAM)
+- 774M (fits on GPU with 6GB of VRAM)
+- 1558M (largest available, too large to fit on laptop GPU with 6GB of VRAM)
+
+I do not have a mirror available for these models, but as of Dec 20, 2021, the weights are still downloadable through the script.
+
 
 ### Some caveats
 
